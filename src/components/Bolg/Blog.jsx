@@ -1,7 +1,7 @@
 //import { FaBeer } from 'react-icons/fa';
 import { CiBookmark } from "react-icons/ci";
 import PropTypes from "prop-types";
-const Blog = ({ blog }) => {
+const Blog = ({ blog,handleAddToBookmark }) => {
     const {title,cover,author,author_img,posted_date, reading_time,hashtags} = blog;
     return (
         <div className="mb-20 ">
@@ -16,7 +16,7 @@ const Blog = ({ blog }) => {
                 </div>
                 <div>
                     <span>{reading_time} min read</span>
-                    <button className="ml-2 text-2xl"><CiBookmark/></button>
+                    <button onClick={handleAddToBookmark} className="ml-2 text-2xl"><CiBookmark/></button>
                 </div>
             </div>
             <h2 className="text-4xl">{title}</h2>
